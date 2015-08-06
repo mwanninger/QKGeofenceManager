@@ -265,6 +265,7 @@ static NSString *const QKInsideRegionsDefaultsKey = @"qk_inside_regions_defaults
 {
     [self.processingTimer invalidate];
     [self.locationManager stopUpdatingLocation];
+    [self.locationManager stopMonitoringSignificantLocationChanges];
     self.regionsGroupedByDistance = nil;
     self.regionsBeingProcessed = nil;
     [self handleGeofenceEvents];
